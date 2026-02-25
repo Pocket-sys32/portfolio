@@ -1,0 +1,3 @@
+# rjthandi.dev
+
+Personal website
