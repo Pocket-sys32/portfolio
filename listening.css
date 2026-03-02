@@ -1,0 +1,183 @@
+/* Listening page — horizontal scroll bar with centered 3D album */
+
+.listening-page .layout-listening {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+
+.listening-page .content-listening {
+  max-width: none;
+  padding: 2.5rem 0 3rem;
+}
+
+.listening-page .section h1 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  padding: 0 2rem;
+}
+
+.listening-page .section {
+  position: relative;
+}
+
+.listening-page .section-intro {
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+/* Horizontal scroll container */
+.albums-scroll-outer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.albums-scroll-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 50vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--border);
+  min-height: 320px;
+}
+
+.albums-scroll-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.albums-scroll-track::-webkit-scrollbar-track {
+  background: var(--border);
+  border-radius: 4px;
+  margin: 0 2rem;
+}
+
+.albums-scroll-track::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.albums-scroll-track::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Each album slot */
+.album-slot {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0.6;
+}
+
+.album-slot.is-center {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 3D cover container — only center gets full size + tilt */
+.album-slot-inner {
+  perspective: 1000px;
+  width: 140px;
+  margin-bottom: 0.75rem;
+  transition: width 0.35s ease, transform 0.35s ease;
+}
+
+.album-slot.is-center .album-slot-inner {
+  width: 220px;
+}
+
+.album-slot-cover {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  background: var(--border) center/cover no-repeat;
+  background-image: var(--cover);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 16px 40px rgba(0, 0, 0, 0.06);
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.album-slot.is-center .album-slot-cover {
+  pointer-events: auto;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12),
+    0 24px 56px rgba(0, 0, 0, 0.1);
+}
+
+.album-slot-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 45%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.album-slot-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+  transition: color 0.2s, font-size 0.2s;
+}
+
+.album-slot.is-center .album-slot-title {
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+/* Details panel for center album */
+.album-details-panel {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  min-height: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.album-details-panel.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.album-details-panel .album-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 0.25rem;
+}
+
+.album-details-panel .album-meta:first-of-type {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.album-details-panel .album-notes {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 0;
+  color: var(--text);
+}
