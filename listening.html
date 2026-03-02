@@ -37,82 +37,53 @@
     <main class="content content-listening">
       <section class="section">
         <h1>Listening</h1>
-        <p class="section-intro">Scroll to browse. The center album has a 3D cover — move your mouse over it.</p>
-        <div class="albums-scroll-outer">
-          <div class="albums-scroll-track" id="albumsTrack">
-            <article class="album-slot" data-album data-artist="A Tribe Called Quest" data-date="March 2024" data-rating="9/10" data-notes="Jazz-rap at its finest. The flows, the samples, the chemistry—everything clicks.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/3/35/A_Tribe_Called_Quest_-_Midnight_Marauders.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Midnight Marauders</span>
+        <p class="section-intro">Click a spine to open. The shelf makes space and the album lays flat.</p>
+        <div class="shelf-scroll" id="shelfScroll">
+          <div class="shelf-track" id="shelfTrack">
+            <article class="shelf-item" data-index="0">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/3/35/A_Tribe_Called_Quest_-_Midnight_Marauders.jpg')"><span class="spine-title">Midnight Marauders</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/3/35/A_Tribe_Called_Quest_-_Midnight_Marauders.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">A Tribe Called Quest</p><p class="album-meta">Listened: March 2024 • Rating: 9/10</p><p class="album-notes">Jazz-rap at its finest. The flows, the samples, the chemistry—everything clicks.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Radiohead" data-date="January 2024" data-rating="9/10" data-notes="The warmth and intimacy Radiohead rarely allows. Reckoner and Weird Fishes are career peaks.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/2/2e/In_Rainbows_Official_Cover.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">In Rainbows</span>
+            <article class="shelf-item" data-index="1">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/2/2e/In_Rainbows_Official_Cover.jpg')"><span class="spine-title">In Rainbows</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/2/2e/In_Rainbows_Official_Cover.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Radiohead</p><p class="album-meta">Listened: January 2024 • Rating: 9/10</p><p class="album-notes">The warmth and intimacy Radiohead rarely allows. Reckoner and Weird Fishes are career peaks.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Frank Ocean" data-date="November 2023" data-rating="10/10" data-notes="Few albums capture longing and memory like this. A modern classic.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">blonde</span>
+            <article class="shelf-item" data-index="2">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg')"><span class="spine-title">blonde</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Frank Ocean</p><p class="album-meta">Listened: November 2023 • Rating: 10/10</p><p class="album-notes">Few albums capture longing and memory like this. A modern classic.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Nujabes" data-date="August 2024" data-rating="8/10" data-notes="Posthumous release that carries his legacy. Perfect for late nights.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/6/6a/Nujabes_-_Spiritual_State.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Spiritual State</span>
+            <article class="shelf-item" data-index="3">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/6/6a/Nujabes_-_Spiritual_State.jpg')"><span class="spine-title">Spiritual State</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/6/6a/Nujabes_-_Spiritual_State.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Nujabes</p><p class="album-meta">Listened: August 2024 • Rating: 8/10</p><p class="album-notes">Posthumous release that carries his legacy. Perfect for late nights.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Daft Punk" data-date="May 2024" data-rating="8/10" data-notes="A love letter to disco and studio craftsmanship. Every groove is immaculate.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Random Access Memories</span>
+            <article class="shelf-item" data-index="4">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg')"><span class="spine-title">Random Access Memories</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Daft Punk</p><p class="album-meta">Listened: May 2024 • Rating: 8/10</p><p class="album-notes">A love letter to disco and studio craftsmanship. Every groove is immaculate.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Miles Davis" data-date="February 2024" data-rating="10/10" data-notes="Modal jazz perfected. Still sounds fresh decades later.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/9/9c/MilesDavis-KindOfBlue.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Kind of Blue</span>
+            <article class="shelf-item" data-index="5">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/9/9c/MilesDavis-KindOfBlue.jpg')"><span class="spine-title">Kind of Blue</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/9/9c/MilesDavis-KindOfBlue.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Miles Davis</p><p class="album-meta">Listened: February 2024 • Rating: 10/10</p><p class="album-notes">Modal jazz perfected. Still sounds fresh decades later.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Sufjan Stevens" data-date="June 2024" data-rating="9/10" data-notes="Orchestral folk with unexpected depth. Joyful and haunting in equal measure.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/4/4f/Sufjan_Stevens_-_Illinois.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Illinois</span>
+            <article class="shelf-item" data-index="6">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/4/4f/Sufjan_Stevens_-_Illinois.jpg')"><span class="spine-title">Illinois</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/4/4f/Sufjan_Stevens_-_Illinois.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Sufjan Stevens</p><p class="album-meta">Listened: June 2024 • Rating: 9/10</p><p class="album-notes">Orchestral folk with unexpected depth. Joyful and haunting in equal measure.</p></div>
             </article>
-            <article class="album-slot" data-album data-artist="Steely Dan" data-date="October 2024" data-rating="8/10" data-notes="Studio perfectionism at its peak. Jazz-rock with pristine production.">
-              <div class="album-slot-inner">
-                <div class="album-slot-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/1/12/Steely_Dan_-_Aja.jpg')">
-                  <div class="album-slot-shine"></div>
-                </div>
-              </div>
-              <span class="album-slot-title">Aja</span>
+            <article class="shelf-item" data-index="7">
+              <button type="button" class="spine-btn" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/1/12/Steely_Dan_-_Aja.jpg')"><span class="spine-title">Aja</span></button>
+              <div class="open-cover" style="--cover: url('https://upload.wikimedia.org/wikipedia/en/1/12/Steely_Dan_-_Aja.jpg')"><div class="cover-shine"></div></div>
+              <div class="open-details"><p class="album-meta">Steely Dan</p><p class="album-meta">Listened: October 2024 • Rating: 8/10</p><p class="album-notes">Studio perfectionism at its peak. Jazz-rock with pristine production.</p></div>
             </article>
           </div>
-        </div>
-        <div class="album-details-panel" id="detailsPanel">
-          <p class="album-meta" id="detailsArtist"></p>
-          <p class="album-meta" id="detailsDate">Listened: — • Rating: —/10</p>
-          <p class="album-notes" id="detailsNotes"></p>
+          <button type="button" class="shelf-nav" id="shelfNext" aria-label="Next">›</button>
         </div>
       </section>
-
       <footer class="main-footer">
         <p>© 2025 Manraj Thandi</p>
       </footer>
