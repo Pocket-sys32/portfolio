@@ -214,3 +214,89 @@ a:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* Albums shelf — bookshelf-style music list */
+.section-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.albums-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.album-card {
+  margin: 0;
+}
+
+.album-spine {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.album-spine:hover {
+  border-color: var(--accent);
+  background: rgba(139, 111, 71, 0.04);
+}
+
+.album-spine[aria-expanded="true"] {
+  border-color: var(--accent);
+  background: rgba(139, 111, 71, 0.06);
+}
+
+.album-title {
+  display: block;
+  line-height: 1.4;
+}
+
+.album-details {
+  padding: 1rem 1.25rem;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  border-left: 3px solid var(--accent);
+  background: rgba(139, 111, 71, 0.04);
+  border-radius: 0 4px 4px 0;
+}
+
+.album-details[hidden] {
+  display: none;
+}
+
+.album-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 0.35rem;
+}
+
+.album-meta:first-of-type {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.album-notes {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 0;
+  color: var(--text);
+}
+
+.music-links {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}

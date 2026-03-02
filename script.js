@@ -1,5 +1,18 @@
 // rjthandi.dev — Subtle interactions
 
+// Albums shelf: expand/collapse on click
+document.querySelectorAll('.album-card[data-album]').forEach((card) => {
+  const btn = card.querySelector('.album-spine');
+  const details = card.querySelector('.album-details');
+  if (!btn || !details) return;
+
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    details.hidden = expanded;
+  });
+});
+
 // Highlight active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav a[href^="#"]');
