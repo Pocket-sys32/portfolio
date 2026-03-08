@@ -1,0 +1,422 @@
+/* rjthandi.dev — design */
+/* Fonts: Fraunces (serif headings) + Source Sans 3 (body) */
+
+:root {
+  --bg: #ffffff;
+  --text: #3d3229;
+  --text-muted: #6b5d52;
+  --accent: #8b6f47;
+  --accent-hover: #6d5337;
+  --border: #e8e4e0;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --font-formal: "Times New Roman", Times, "Liberation Serif", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(160px, 200px) 1fr;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background: var(--bg);
+  padding: 2rem 1.25rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+}
+
+.sidebar-header {
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.logo:hover {
+  color: var(--accent) !important;
+}
+
+.nav-label {
+  font-family: var(--font-formal);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.nav a,
+.social a {
+  font-family: var(--font-formal);
+  font-weight: 500;
+}
+
+.nav ul,
+.social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li,
+.social li {
+  margin-bottom: 0.4rem;
+}
+
+.nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.social {
+  margin-top: 2rem;
+}
+
+@media (max-width: 720px) {
+  .sidebar-header {
+    margin-bottom: 0;
+  }
+  .social {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.content {
+  padding: 2.5rem 2rem 3rem;
+  max-width: 38rem;
+}
+
+@media (max-width: 720px) {
+  .content {
+    padding: 2rem 1.25rem 3rem;
+  }
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+}
+
+.block {
+  margin-bottom: 1.5rem;
+}
+
+.block h2 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+}
+
+.block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.block li {
+  margin-bottom: 0.75rem;
+}
+
+.block li:last-child {
+  margin-bottom: 0;
+}
+
+.cta {
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+}
+
+.cta a {
+  font-weight: 500;
+}
+
+.section-minimal h2 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+}
+
+.list-minimal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-minimal li {
+  margin-bottom: 1.25rem;
+}
+
+.list-minimal li:last-child {
+  margin-bottom: 0;
+}
+
+.project-caption {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.main-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Music — expandable spines (adammaj.com style from video) */
+.music-section h2 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: var(--text-muted);
+}
+
+.music-intro {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.bookshelf {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.shelf-viewport {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.shelf-view {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.shelf-track {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 11px;
+  transition: transform 500ms ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.shelf-track.scrolling {
+  transition: transform 100ms linear;
+}
+
+.shelf-scroll {
+  flex-shrink: 0;
+  width: 32px;
+  border: none;
+  background: var(--border);
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.shelf-scroll:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.shelf-surface {
+  height: 12px;
+  background: linear-gradient(180deg, #a0826d 0%, #8b6f47 30%, #6d5337 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* Album books — adammaj.com exact structure: spine + cover, both rotate in 3D */
+.album-book {
+  --spine-w: 42px;
+  --cover-w: 168px;
+  --book-h: 210px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: var(--spine-w);
+  height: var(--book-h);
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  gap: 0;
+  transition: width 500ms ease;
+  perspective: 1000px;
+}
+
+.album-book.active {
+  width: calc(var(--spine-w) + var(--cover-w));
+}
+
+/* Spine — rotates back when open (adammaj: rotateY -60deg) */
+.book-spine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spine-w);
+  height: var(--book-h);
+  flex-shrink: 0;
+  background-image: var(--cover-url);
+  background-color: var(--text-muted);
+  background-size: cover;
+  background-position: left center;
+  transform-origin: right center;
+  transform: rotateY(0deg);
+  transition: transform 500ms ease;
+  transform-style: preserve-3d;
+  border-radius: 2px 0 0 0;
+  box-shadow: 1px 0 0 rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.album-book.active .book-spine {
+  transform: rotateY(-60deg);
+}
+
+/* Cover — opens from 88.8deg (closed) to 30deg (open) */
+.book-cover {
+  position: relative;
+  flex-shrink: 0;
+  width: var(--cover-w);
+  height: var(--book-h);
+  overflow: hidden;
+  transform-origin: left center;
+  transform: rotateY(88.8deg);
+  transition: transform 500ms ease;
+  transform-style: preserve-3d;
+}
+
+.album-book.active .book-cover {
+  transform: rotateY(30deg);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.25);
+}
+
+.spine-title {
+  display: none;
+}
+
+/* Album detail — full cover + review below shelf */
+.album-detail {
+  min-height: 200px;
+}
+
+.album-review {
+  display: none;
+  margin: 0;
+}
+
+.album-review.active {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.album-review-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.album-review h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.album-review .album-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.album-review p:last-of-type {
+  margin: 0;
+  line-height: 1.7;
+}
